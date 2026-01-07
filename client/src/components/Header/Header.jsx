@@ -10,6 +10,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { toggleFilterBox } from "@/store/uiSlice";
 import { SearchBar } from "..";
+import userAvatar  from "/assets/user.png";
 
 const Header = () => {
   const location = useLocation();
@@ -82,7 +83,7 @@ const Header = () => {
 
             <img
               // src="https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=126&h=75&dpr=1"
-              src={userData.avatar}
+              src={userData.avatar || userAvatar}
               alt="Profile img"
               className="size-7 sm:size-8 rounded-full object-cover shrink-0"
             />

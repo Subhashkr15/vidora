@@ -46,7 +46,7 @@ const RegisterComponent = () => {
     } else {
       setAvatarPreview(null);
     }
-  }, [avatarFile]);
+  }, [avatarFile]); 
 
   const handleRegister = async (data) => {
     const fullName = data?.firstName.trim() + " " + data?.lastName.trim();
@@ -193,9 +193,9 @@ const RegisterComponent = () => {
                 id="avatar-image"
                 type="file"
                 accept="image/png, image/jpg, image/jpeg, image/gif"
-                {...register("avatar", {
-                  required: "Avatar image is required",
-                })}
+                // {...register("avatar", {
+                //   required: "Avatar image is required",
+                // })}
                 className={`${errors.image ? "border-red-500 mb-1" : "mb-4"}
                 py-2 mt-3 hidden bg-slate-200 w-full rounded-xl`}
               />

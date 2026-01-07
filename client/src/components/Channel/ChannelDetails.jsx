@@ -12,6 +12,7 @@ import {
 import { toggleSubscription } from "@/utils/apis";
 import { Loader } from "lucide-react";
 import { ErrorScreen, LoadingScreen } from "..";
+import userAvatar  from "/assets/user.png";
 
 const ChannelDetails = () => {
   const { username } = useParams();
@@ -81,7 +82,7 @@ const ChannelDetails = () => {
       <div className="flex gap-2 sm:gap-3">
         <img
           // src="https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          src={userData.avatar}
+          src={userData.avatar || userAvatar}
           alt="Profile image"
           className="size-16 flex-shrink-0 sm:size-24 md:size-32 lg:size-36 xl:size-40 rounded-full object-cover"
         />

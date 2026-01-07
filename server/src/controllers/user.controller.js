@@ -73,7 +73,7 @@ const registerUser = asyncHandler(async (req, res) => {
   const avatar = avatarLocalPath ? await uploadOnCloudinary(avatarLocalPath) : null;
   const coverImage = coverImageLocalPath ? await uploadOnCloudinary(coverImageLocalPath) : null;
 
-  if (!avatar) {
+  if (avatarLocalPath && !avatar) {
     throw new ApiError(500, "Failed to upload avatar to cloudinary")
   }
 
