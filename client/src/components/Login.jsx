@@ -47,7 +47,7 @@ const LoginComponent = () => {
             <Link to="/register" className="text-slate-950 font-medium">
               sign up
             </Link>{" "}
-            to create a Videora account
+            to create a Vidora account
           </p>
           <div className="w-full flex flex-col gap-1">
             <div className="w-full">
