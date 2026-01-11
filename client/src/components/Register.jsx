@@ -179,7 +179,7 @@ const RegisterComponent = () => {
                 {avatarFile && avatarFile.length > 0 ? (
                   avatarFile[0].name
                 ) : (
-                  <>
+                  <>  
                     <IoCloudUpload className="text-2xl" />
                     <span className="underline underline-offset-1 text-slate-700">
                       Click to upload
@@ -193,9 +193,9 @@ const RegisterComponent = () => {
                 id="avatar-image"
                 type="file"
                 accept="image/png, image/jpg, image/jpeg, image/gif"
-                // {...register("avatar", {
-                //   required: "Avatar image is required",
-                // })}
+                {...register("avatar", {
+                  // required: "Avatar image is required",
+                })}
                 className={`${errors.image ? "border-red-500 mb-1" : "mb-4"}
                 py-2 mt-3 hidden bg-slate-200 w-full rounded-xl`}
               />

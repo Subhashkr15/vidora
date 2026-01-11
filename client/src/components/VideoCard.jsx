@@ -45,7 +45,7 @@ const VideoCard = ({
             >
               <img
                 // src="https://images.pexels.com/photos/1115816/pexels-photo-1115816.jpeg?auto=compress&cs=tinysrgb&w=126&h=75&dpr=1"
-                src={ownerDetails?.avatar}
+                src={ownerDetails?.avatar || "https://ui-avatars.com/api/?name=" + ownerDetails?.fullName}
                 alt="Profile img"
                 className="size-10 rounded-full object-cover"
               />
